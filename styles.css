@@ -1,0 +1,582 @@
+/* Общие стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Анимации */
+@keyframes slideIn {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes logoFade {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutToRight {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.slide-in {
+  animation: slideIn 1.2s ease-in-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+.pulse {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Навигация */
+.navbar {
+  background-color: #2c2c2c;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  padding: 1rem 0;
+}
+
+.navbar-brand img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #e0e0e0;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border-color: #ff4d4d;
+}
+
+/* Бейдж в навигации */
+.badge {
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
+/* Модальное окно с логотипом */
+.logo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.logo-modal-content {
+  text-align: center;
+}
+
+.logo-animation {
+  width: 220px;
+  animation: logoFade 2.5s ease-in-out;
+}
+
+/* Герой-секция */
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.wallpaperscraft.ru/image/single/mebel_postel_podushka_70240_1920x1080.jpg') center/cover no-repeat;
+  color: #fff;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-contФent h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .lead {
+  font-weight: 300;
+}
+
+/* Кастомные кнопки */
+.btn-custom {
+  background: #ff4d4d;
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.btn-custom:hover {
+  background: #e03e3e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
+  color: #fff;
+}
+
+.btn-outline-custom {
+  border: 2px solid #ff4d4d;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.btn-outline-custom:hover,
+.btn-outline-custom.active {
+  background-color: #e03e3e;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* Наши преимущества */
+
+
+
+/* Стиль для изображений в секции преимуществ */
+
+
+/* Популярные товары */
+.popular-products {
+  background-color: #1a1a1a;
+}
+
+/* Карточки */
+.card {
+  background-color: #2c2c2c;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 77, 77, 0.3);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Контейнер карточки в каталоге */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Описание товара в карточке */
+.card-text {
+  flex-grow: 1;
+}
+
+/* Кнопка "В корзину" */
+.add-to-cart-btn {
+  margin-top: auto;
+}
+
+/* Хлебные крошки */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+
+.breadcrumb-item a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.breadcrumb-item a:hover {
+  color: #ff4d4d;
+}
+
+.breadcrumb-item.active {
+  color: #ff4d4d;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #b0b0b0;
+}
+
+/* Стили для страницы товара */
+.product {
+  background-color: #1a1a1a;
+  padding-top: 80px;
+}
+
+.product-gallery {
+  position: sticky;
+  top: 80px;
+}
+
+.product-gallery #main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+}
+
+.product-gallery .thumbnail {
+  border: 2px solid transparent;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: #ff4d4d;
+}
+
+.product .text-danger {
+  color: #ff4d4d !important;
+}
+
+.product .delivery-info i {
+  color: #ff4d4d;
+}
+
+.product .nav-tabs {
+  border-bottom: 1px solid #444;
+}
+
+.product .nav-tabs .nav-link {
+  color: #e0e0e0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-right: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.product .nav-tabs .nav-link:hover,
+.product .nav-tabs .nav-link.active {
+  color: #ff4d4d;
+  border-bottom: 2px solid #ff4d4d;
+}
+
+.product .review {
+  border-bottom: 1px solid #444;
+  padding: 1rem 0;
+}
+
+.product .review:last-child {
+  border-bottom: none;
+}
+
+/* Акции */
+.promotions {
+  background-color: #2c2c2c;
+}
+
+/* Каталог */
+.catalog {
+  background-color: #1a1a1a;
+}
+
+#search-input {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border-color: #444;
+  transition: border-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#search-input:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+  transform: scale(1.01);
+}
+
+#search-input::placeholder {
+  color: #b0b0b0;
+}
+
+/* Услуги */
+.services {
+  background-color: #1a1a1a;
+}
+
+.services .card-img-top {
+  height: 200px;
+}
+
+/* Корзина */
+.cart {
+  background-color: #1a1a1a;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding: 1.5rem 0;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.cart-item:hover {
+  background-color: #2c2c2c;
+  transform: translateX(3px);
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 1.5rem;
+  border-radius: 5px;
+}
+
+.cart-item h5 {
+  font-weight: 700;
+}
+
+.cart-item p {
+  color: #b0b0b0;
+}
+
+.cart-item .btn-custom {
+  margin-left: auto;
+}
+
+/* Оформление заказа */
+.checkout {
+  background-color: #1a1a1a;
+}
+
+.checkout .form-control,
+.checkout .form-select {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border-color: #444;
+  transition: border-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.checkout .form-control:focus,
+.checkout .form-select:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+  transform: scale(1.01);
+}
+
+.checkout .form-control::placeholder {
+  color: #b0b0b0;
+}
+
+/* Уведомление о добавлении в корзину */
+.cart-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ff4d4d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+  font-weight: 500;
+}
+
+.cart-notification.show {
+  display: block;
+  animation: slideInFromRight 0.5s ease-in-out forwards;
+}
+
+.cart-notification.hide {
+  animation: slideOutToRight 0.5s ease-in-out forwards;
+}
+
+/* О компании */
+.about {
+  background-color: #1a1a1a;
+}
+
+.about img {
+  border-radius: 10px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff4d4d;
+  font-size: 1.5rem;
+}
+
+/* Контакты */
+.contacts {
+  background-color: #1a1a1a;
+}
+
+.contacts .form-control {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border-color: #444;
+  transition: border-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.contacts .form-control:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.3);
+  transform: scale(1.01);
+}
+
+.contacts .form-control::placeholder {
+  color: #b0b0b0;
+}
+
+.contacts iframe {
+  border-radius: 10px;
+}
+
+/* Футер */
+footer {
+  background-color: #2c2c2c;
+  border-top: 1px solid #444;
+}
+
+footer a {
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: color 0.5s ease-in-out;
+}
+
+footer a:hover {
+  color: #ff4d4d;
+}
+
+.social-links i {
+  font-size: 1.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .lead {
+    font-size: 1.2rem;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+
+  .product-gallery {
+    position: static;
+  }
+
+  .product-gallery #main-image {
+    height: 300px;
+  }
+
+  .product .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .services .card-img-top {
+    height: 150px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .cart-item .btn-custom {
+    margin-top: 1rem;
+  }
+
+  .advantages h5 {
+    font-size: 1.1rem;
+  }
+
+  .advantages p {
+    font-size: 0.9rem;
+  }
+
+  .logo-animation {
+    width: 160px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .advantage-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cart-notification {
+    top: 10px;
+    right: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}

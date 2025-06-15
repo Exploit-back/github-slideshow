@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МегаМебель - Информация о товаре</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Навигация -->
+  <nav class="navbar navbar-exapand-lg navbar-dark fixed-top slide-in">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="МегаМебель" width="32">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Корзина</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">О компании</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+
+  <!-- Информация о товаре -->
+  <section class="py-5 product">
+    <div class="container">
+      <!-- Хлебные крошки -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+          <li class="breadcrumb-item"><a id="breadcrumb-category" href="#"></a></li>
+          <li class="breadcrumb-item active" id="breadcrumb-product" aria-current="page"></li>
+        </ol>
+      </nav>
+
+      <!-- Кнопка "Назад" -->
+      <a href="catalog.html" class="btn btn-outline-custom mb-4"><i class="fas fa-arrow-left me-2"></i> Назад в каталог</a>
+
+      <div class="row">
+        <!-- Галерея изображений -->
+        <div class="col-md-6">
+          <div class="product-gallery">
+            <img id="main-image" class="img-fluid rounded mb-3" src="" alt="Товар">
+            <div class="thumbnails d-flex flex-wrap">
+              <!-- Миниатюры будут добавлены через JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Информация о товаре -->
+        <div class="col-md-6">
+          <h1 id="product-name" class="h3 mb-3 text-light"></h1>
+          <p id="product-category" class="text-muted mb-2"></p>
+          <div class="d-flex align-items-center mb-3">
+            <span id="product-price" class="h4 text-danger fw-bold me-3"></span>
+            <span class="text-muted text-decoration-line-through">Старая цена: +10%</span>
+          </div>
+          <div class="mb-4">
+            <button id="add-to-cart-btn" class="btn btn-custom me-2">Добавить в корзину</button>
+            <button id="buy-now-btn" class="btn btn-outline-custom">Купить сейчас</button>
+          </div>
+          <div class="delivery-info mb-4">
+            <h5 class="text-light">Доставка и возврат</h5>
+            <p><i class="fas fa-truck me-2"></i> Доставка по всей России: от 3 до 7 дней.</p>
+            <p><i class="fas fa-undo me-2"></i> Возврат в течение 14 дней при сохранении товарного вида.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Вкладки с описанием, характеристиками и отзывами -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <ul class="nav nav-tabs mb-4" id="productTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Описание</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab" aria-controls="specs" aria-selected="false">Характеристики</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Отзывы</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="productTabContent">
+            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+              <p id="product-description" class="text-light"></p>
+            </div>
+            <div class="tab-pane fade" id="specs" role="tabpanel" aria-labelledby="specs-tab">
+              <ul class="list-unstyled text-light">
+                <li><strong>Материал:</strong> <span id="product-material"></span></li>
+                <li><strong>Размеры:</strong> <span id="product-dimensions"></span></li>
+                <li><strong>Цвет:</strong> <span id="product-color"></span></li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+              <div class="review">
+                <p><strong>Анна</strong> <span class="text-muted">12.05.2025</span></p>
+                <p class="text-light">Отличный товар, полностью соответствует описанию! Доставка быстрая, рекомендую.</p>
+              </div>
+              <div class="review">
+                <p><strong>Иван</strong> <span class="text-muted">15.05.2025</span></p>
+                <p class="text-light">Качество на высоте, но цвет немного отличается от фото. В целом доволен.</p>
+              </div>
+              <p class="text-muted">Оставьте свой отзыв после покупки!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p>© 2025 МегаМебель. Все права защищены.</p>
+      <div class="social-links">
+        <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
