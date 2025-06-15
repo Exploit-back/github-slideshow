@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="МегаМебель - качественная мебель для вашего дома. Каталог, услуги, акции.">
-  <title>МегаМебель - Главная</title>
+  <meta name="description" content="Услуги МегаМебель: изготовление мебели, доставка, монтаж.">
+  <title>МегаМебель - Услуги</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -24,9 +24,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Услуги</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">О компании</a></li>
           <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
           <li class="nav-item"><a class="nav-link" href="cart.html">Корзина</a></li>
@@ -35,65 +35,38 @@
     </div>
   </nav>
 
-  <!-- Герой-секция -->
-  <section class="hero text-center py-5">
-    <div class="container hero-content">
-      <h1 class="display-4 fw-bold fade-in-up">МегаМебель</h1>
-      <p class="lead fs-4 fade-in-up delay-1">Качественная мебель для вашего дома</p>
-      <a href="catalog.html" class="btn btn-custom btn-lg mt-3 pulse fade-in-up delay-2">Перейти в каталог</a>
-    </div>
-  </section>
-
-  <!-- Наши преимущества -->
-  <section class="advantages py-5 bg-secondary">
+  <!-- Услуги -->
+  <section class="services py-5 bg-dark">
     <div class="container">
-      <h2 class="text-center mb-5 display-5 fade-in-up">Наши преимущества</h2>
-      <div class="row text-center">
-        <div class="col-md-3 mb-4 fade-in-up delay-1">
-          <i class="bi bi-check2-circle display-4 text-danger mb-3"></i>
-          <h5 class="fw-bold">100% гарантия качества</h5>
-          <p>Мы используем только сертифицированные материалы.</p>
-        </div>
-        <div class="col-md-3 mb-4 fade-in-up delay-2">
-          <i class="bi bi-hourglass-split display-4 text-danger mb-3"></i>
-          <h5 class="fw-bold">Более 10 лет успешной работы</h5>
-          <p>Надежный партнер с 2005 года.</p>
-        </div>
-        <div class="col-md-3 mb-4 fade-in-up delay-3">
-          <i class="bi bi-truck display-4 text-danger mb-3"></i>
-          <h5 class="fw-bold">Оперативная доставка</h5>
-          <p>Доставка по всей России в кратчайшие сроки.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- Популярные товары -->
-  <section class="popular-products py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Популярные товары</h2>
-      <div class="row" id="popular-product-list"></div>
-    </div>
-  </section>
-
-  <!-- Акции -->
-  <section class="promotions py-5 bg-secondary">
-    <div class="container">
-      <h2 class="text-center mb-5 display-5 fade-in-up">Акции</h2>
+      <h2 class="text-center mb-5 display-5 fade-in-up">Наши услуги</h2>
       <div class="row">
-        <div class="col-md-6 mb-3 fade-in-up delay-1">
+        <div class="col-12 mb-4 fade-in-up delay-1">
           <div class="card bg-dark text-light border-0 shadow-sm">
+            <img src="img/service1.jpg" class="card-img-top" alt="Мебель на заказ">
             <div class="card-body">
-              <h5 class="card-title fw-bold">Скидка 20% на столы</h5>
-              <p class="card-text">Только до конца месяца!</p>
+              <h5 class="card-title fw-bold">Мебель на заказ</h5>
+              <p class="card-text">Создаем уникальную мебель по вашим размерам и пожеланиям. Используем только экологичные материалы.</p>
+              <a href="contacts.html" class="btn btn-custom pulse">Заказать</a>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3 fade-in-up delay-2">
+        <div class="col-12 mb-4 fade-in-up delay-2">
           <div class="card bg-dark text-light border-0 shadow-sm">
+            <img src="img/service2.jpg" class="card-img-top" alt="Доставка">
             <div class="card-body">
-              <h5 class="card-title fw-bold">Бесплатная доставка</h5>
-              <p class="card-text">При заказе от 50 000 ₽</p>
+              <h5 class="card-title fw-bold">Доставка</h5>
+              <p class="card-text">Быстрая и надежная доставка по всей России. Бесплатно при заказе от 50 000 ₽.</p>
+              <a href="contacts.html" class="btn btn-custom pulse">Заказать</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-4 fade-in-up delay-3">
+          <div class="card bg-dark text-light border-0 shadow-sm">
+            <img src="img/service3.jpg" class="card-img-top" alt="Монтаж">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Монтаж</h5>
+              <p class="card-text">Профессиональная сборка мебели на месте. Гарантируем аккуратность и скорость.</p>
+              <a href="contacts.html" class="btn btn-custom pulse">Заказать</a>
             </div>
           </div>
         </div>
